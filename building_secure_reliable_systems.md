@@ -19,7 +19,7 @@ Use proxy to review, approve, run risky commands without establishing an SSH con
 [Zero touch prod](https://www.usenix.org/conference/srecon19emea/presentation/czapinski) to require every change
 in production to be made by automation, validated by software..
 
-# PRR: [Production readiness review](https://sre.google/sre-book/evolving-sre-engagement-model/)
+## PRR: [Production readiness review](https://sre.google/sre-book/evolving-sre-engagement-model/)
 
 Step needed to require SRE engagements, which identifies reliability needs of a service based on its details.
 Objectives: verify that a service meets accepted standards of production setup + minimize future incidents + bad impacts.
@@ -38,9 +38,26 @@ Both SRE and product development teams participate and assist each other in refa
 SRE related section within Google design doc:
 - Data integrity: how to detect data corruption / data loss
 - SLA requirement
-- Security and privacy considerations: 
+- Security and privacy considerations
+- Data integrrity (how will you find about data corruption or loss)
+
+## Initial velocity vs sustained velocity
+
+Choosing to not account for critical requirements like security, reliability, and maintainability early in the project cycle may indeed increase your project’s velocity early in the project’s lifetime. However, experience shows that **doing so also usually slows you down significantly later**.
+
+Therefore, it’s **important to embed security and reliability in your team culture early on**
 
 
+## Design for least privillege
 
+The principle of least privilege says that **users should have the minimum amount of access needed to accomplish a task**, regardless of whether the access is from humans or systems.
 
+Could be rephrase as: "say no to redundant access permission"
+
+The principle is similar to "Zero trust networking" (user’s network location (being within the company’s network) doesn’t grant any privileged access). Google employs [BeyondCorp](https://cloud.google.com/beyondcorp/) program to realized (implemented) the principle.
+
+Several best practices that could be used along:
+- Small functional APIs (keep it simple)
+- Breakglass: emergency mechanism to access system (bypasses authorization system completely)
+- Auditing: collect good audit logs using small functioning APIs
 
