@@ -3,7 +3,8 @@
 This interesting algorithm is used for a single problem, 
 is to calculate maximum sum of all subarrays in a provided array, 
 but could be extended in few other variances which have the pattern of 
-"Calculate the global optimized solution of all subarrays"
+"Calculate the global optimized solution of all subarrays".
+Side note: Kadane is a math professor from CMU, one of the early proponents of Bayesian statistics.
 
 This video visualized the algorithm to make it easier to understand.
 https://www.youtube.com/watch?v=86CQq3pKSUw 
