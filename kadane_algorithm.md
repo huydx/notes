@@ -13,6 +13,6 @@ The most interesting thing from this algorithm is, when we understand it,
 it became so obvious.
 
 There're 2 main core ideas from the algorithm:
-- Rephrase the problem into: maximum of all subarrays = maximum of all subarrays that end at each index
+- Rephrase the problem into: maximum of all subarrays = maximum of all subarrays that **end at each index**. (could this trick be generalized as remodel into a problem with smaller space / limited space?)
 - Maximum of all subarray end at index (i), could be interpolated from the value from (i-1) by `max = max(arr[i], max + arr[i])`
 
