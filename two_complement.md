@@ -3,7 +3,7 @@
 Reading a golang issue related to how two complement works https://github.com/golang/go/issues/51414 
 Most of the time, we don't need to care about how two complement works, but this issue proves the opposite, 
 we do need to care because of two complement algorithm has **an exception** : The most negative integer could not be negate.
-The reason could be obviously explained using a 8 bit integer:
+The reason could be obviously explained using a 8 bit integer (overflow):
 
 - −128:	1000 0000
 - invert bits:	0111 1111
